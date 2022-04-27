@@ -1,0 +1,62 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        .estilo{
+            background-color: darkgreen;
+            width: 700px;
+            height: 400px;
+            margin:auto;
+            border-radius: 10px;
+            border: 10px solid red ;
+           
+        }
+        .estilo2{
+            background-color: white;
+            width: 70%;
+            height: 80%;
+            margin:auto;
+            margin-top: 30px;
+            border-radius: 10px;
+            border:5px solid pink
+
+        }
+        .inputClass{
+            margin:auto;
+            font-size: larger;
+
+
+
+            
+            
+        }
+
+    </style>
+    <script>
+        function Clicboton(){
+            alert("evento");
+        }
+
+    </script>
+    <body>
+        <div class="estilo">
+            <div class="estilo2">
+                <h3> cuadro de texto</h3>
+                <input class="inputClass" type="text" name="nombre" placeholder="ingrese datos"/><br>
+                <h3>Combo</h3>
+                <select name="Combo" class="inputClass">
+                    <option value="1">Arriba</option>
+                    <option value="2">Abajo</option>
+                    
+                </select> <br>
+                <h3>Boton</h3>
+                <button class="inputClass" id="boton" name="boton" onclick="Clicboton()">Clickeame</button><br>
+                
+
+            </div>
+            /// permitir seleccionar en elcombo un OPERACION MATEMATICA LAS 4 . INGRESA LOS VALORES EN LOS IMPUT TEXTO 1 Y DOS .CALCULAR EL RESULTADO DEPENDIENDO DE LO QUE SE SELECCIONE EN EL COMBO, Y MOSTRAR EN EL ALERTA
+
+        </div>
+    </body>
+</html>
