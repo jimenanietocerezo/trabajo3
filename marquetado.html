@@ -9,7 +9,9 @@
             height: 400px;
             margin:auto;
             border-radius: 10px;
-            border: 10px solid red ;
+            border: 10px solid gray ;
+            text-align:center
+            
            
         }
         .estilo2{
@@ -19,44 +21,78 @@
             margin:auto;
             margin-top: 30px;
             border-radius: 10px;
-            border:5px solid pink
+            border:5px solid black
+        
 
         }
         .inputClass{
             margin:auto;
             font-size: larger;
+         
 
 
 
             
             
         }
+        
 
     </style>
     <script>
         function Clicboton(){
-            alert("evento");
+            
+            var seleccion=document.getElementById('select1');
+            var operacion= seleccion.selectedIndex;
+            const numero1 = document.getElementById("num1").value;
+            const numero2 = document.getElementById("num2").value;
+
+            switch (operacion) {
+                case 0:
+                       alert(parseInt(numero1)+parseInt(numero2));
+                break;
+                case 1:
+                       alert(parseInt(numero1)-parseInt(numero2));
+                break;
+                case 2:
+                       alert(parseInt(numero1)*parseInt(numero2));
+                break;
+                case 3:  
+                       alert(parseInt(numero1)/parseInt(numero2));  
+                break;
+                default:
+                console.log(":(");
+                break;
+            
         }
+        
+
+
+        }
+        
+        
 
     </script>
     <body>
         <div class="estilo">
             <div class="estilo2">
-                <h3> cuadro de texto</h3>
-                <input class="inputClass" type="text" name="nombre" placeholder="ingrese datos"/><br>
-                <h3>Combo</h3>
-                <select name="Combo" class="inputClass">
-                    <option value="1">Arriba</option>
-                    <option value="2">Abajo</option>
+                <h3> Por favor, ingrese dos numero</h3>
+                <input type="number" name= "texto1" id="num1"><br>  
+                <input type="number" name= "texto2" id="num2">  
+                <br>
+                <h3>Seleccionar una operacion matematica</h3>
+                <select name="Combo" id="select1" class="inputClass">
+                    <option value="1">+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
                     
                 </select> <br>
-                <h3>Boton</h3>
-                <button class="inputClass" id="boton" name="boton" onclick="Clicboton()">Clickeame</button><br>
+                <h3>Su resultado es:</h3>
+                <button class="inputClass" id="boton" onclick="Clicboton()">=</button><br>
                 
 
             </div>
-            /// permitir seleccionar en elcombo un OPERACION MATEMATICA LAS 4 . INGRESA LOS VALORES EN LOS IMPUT TEXTO 1 Y DOS .CALCULAR EL RESULTADO DEPENDIENDO DE LO QUE SE SELECCIONE EN EL COMBO, Y MOSTRAR EN EL ALERTA
-
+            
         </div>
     </body>
 </html>
